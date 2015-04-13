@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript" src="bower_components/zeroclipboard/dist/ZeroClipboard.min.js"></script>
+  <style type="text/css">
+
+  </style>
+</head>
+<body>
+  <input id="input">
+  <input id="output" readonly value="Adf">
+  <button id="copy" title="Click to copy to clipboard.">Copy</button>
+
+  <script>
+    var input = document.getElementById('input');
+    var output = document.getElementById('output');
+    var client = new ZeroClipboard(document.getElementById('copy'));
+
+    client.on('ready', function (event) {
+      client.on('copy', function (event) {
+        alert('wut')
+        event.clipboardData.setData('text/plain', output.value);
+      });
+
+      client.on('aftercopy', function (event) {
+        
+      });
+    });
+
+    client.on('error', function (event) {
+      console.error('ZeroClipboard error of type "' + event.name + '": ' + event.message);
+      ZeroClipboard.destroy();
+    });
+  </script>
+</body>
+</html>

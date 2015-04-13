@@ -1,0 +1,20 @@
+{
+  "name": "social-tag-escaper",
+  "version": "0.0.1",
+  "homepage": "https://github.com/jayphelps/social-tag-escaper",
+  "authors": [
+    "Jay Phelps <hello@jayphelps.com>"
+  ],
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "zeroclipboard": "~2.2.0"
+  }
+}
